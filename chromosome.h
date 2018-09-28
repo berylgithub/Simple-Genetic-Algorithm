@@ -8,10 +8,11 @@ using namespace std;
 struct chromosome{
     int genes[5];
     int generation;
+    double fitness;
 };
 
-vector<chromosome> crossover(chromosome c1, chromosome c2);
-void mutate(chromosome c1);
-void tes();
+chromosome crossover(chromosome c1, chromosome c2);
+chromosome mutate(chromosome c1, double chance);
+double f_fitness(chromosome c);
 
 #endif // CHROMOSOME_H_INCLUDED
