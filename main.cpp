@@ -16,7 +16,7 @@ void genetic_algorithm_driver();
 
 vector<chromosome> population;
 const int INIT_POP = 2;
-const double FITNESS_MIN = 0.2001;
+const double FITNESS_MIN = 0.2;
 const double MUTATE_RATE = 0.1;
 
 int main()
@@ -63,7 +63,7 @@ void print_population(){
 void genetic_algorithm_driver(){
     init_population(INIT_POP);
     //get the minimum fitness from current generation
-    chromosome c_fit;
+    chromosome c_fit = population[0];
     double fit_current;
     fit_current=f_fitness(population[0]);
     for(int i=0; i<population.size(); i++){
